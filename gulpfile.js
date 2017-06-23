@@ -24,7 +24,6 @@ const SRC_PATH     = "./modules",
           "ui-bootstrap",
           "ui-foundation",
           "ui-ionic",
-          "ui-kendo",
           "ui-material",
           "ui-ng-bootstrap",
           "ui-primeng"

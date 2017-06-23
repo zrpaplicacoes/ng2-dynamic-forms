@@ -1,4 +1,4 @@
-import { Component, ContentChildren, Input, EventEmitter, OnInit, Output, QueryList, ViewChild } from "@angular/core";
+import { Component, ContentChildren, Input, EventEmitter, ElementRef, OnInit, Output, QueryList, ViewChild } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { Checkbox, DateTime, TextInput, RadioGroup, Range, Select, Toggle } from "ionic-angular";
 import {
@@ -63,6 +63,7 @@ export class DynamicFormIonicComponent extends DynamicFormControlComponent imple
     @ViewChild(Range) ionRange: Range | undefined;
     @ViewChild(Select) ionSelect: Select | undefined;
     @ViewChild(Toggle) ionToggle: Toggle | undefined;
+    @ViewChild("customTemplate") customTemplate: ElementRef;
 
     type: IonicFormControlType | undefined;
 
@@ -74,6 +75,10 @@ export class DynamicFormIonicComponent extends DynamicFormControlComponent imple
         super.ngOnInit();
 
         this.type = DynamicFormIonicComponent.getFormControlType(this.model);
+    }
+
+    hasCustomTemplate() {
+        return this.customTemplate.nativeElement.children.length !== 0;
     }
 
     static getFormControlType(model: DynamicFormControlModel): IonicFormControlType | null {

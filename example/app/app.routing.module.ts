@@ -2,7 +2,6 @@ import { RouterModule, Route } from "@angular/router";
 import { BasicExampleComponent } from "./basic/basic-example.component";
 import { BootstrapExampleComponent } from "./bootstrap/bootstrap-example.component";
 import { FoundationExampleComponent } from "./foundation/foundation-example.component";
-import { KendoExampleComponent } from "./kendo/kendo-example.component";
 import { MaterialExampleComponent } from "./material/material-example.component";
 import { NGBootstrapExampleComponent } from "./ng-bootstrap/ng-bootstrap-example.component";
 import { PrimeNGExampleComponent } from "./primeng/primeng-example.component";
@@ -62,16 +61,6 @@ const APP_ROUTES: Route[] = [
             title: "NG Bootstrap UI",
             href: "https://github.com/udos86/ng2-dynamic-forms/blob/master/example/app/ng-bootstrap/ng-bootstrap-example.model.ts",
             bgColor: "#1b95e0"
-        }
-    },
-
-    {
-        path: "example-kendo",
-        component: KendoExampleComponent,
-        data: {
-            title: "Kendo UI",
-            href: "https://github.com/udos86/ng2-dynamic-forms/blob/master/example/app/kendo/kendo-example.model.ts",
-            bgColor: "#ff5747"
         }
     },
 
